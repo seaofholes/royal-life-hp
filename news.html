@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <title>ニュース | 有限会社ロイヤルライフ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="有限会社ロイヤルライフからの最新情報・お知らせです。"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2.0">
+  <style>
+    /* ニュースリスト */
+    .news-list {
+      width: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-list li {
+      border-bottom: 1px solid #e8e8e6;
+      padding: 18px 0 14px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+
+    .news-date {
+      color: var(--gold);
+      font-size: 1.15rem;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.07em;
+    }
+
+    .news-content {
+      color: var(--text-main);
+      font-size: 1.45rem;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 599px) {
+      .news-list li {
+        padding: 14px 0 10px 0;
+      }
+      .news-date { font-size: 1.05rem; }
+      .news-content { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <div class="logo-title">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
+        <span class="site-title">有限会社ロイヤルライフ</span>
+      </div>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">トップページ</a>
+        <a href="company.html" class="nav-link">会社概要</a>
+        <a href="properties.html" class="nav-link">物件情報</a>
+        <a href="news.html" class="nav-link active">ニュース</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 本文 -->
+  <main>
+    <section class="main-section">
+      <div class="main-box">
+        <h1 class="section-title">ニュース</h1>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">2024/07/01</span>
+            <span class="news-content">夏季休業のお知らせ：8月13日(火)〜16日(金)は夏季休業となります。</span>
+          </li>
+          <li>
+            <span class="news-date">2024/06/10</span>
+            <span class="news-content">「ザ・千里タワー」物件情報を更新しました。</span>
+          </li>
+          <li>
+            <span class="news-date">2024/04/01</span>
+            <span class="news-content">WEBサイトをリニューアルしました。</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <div class="footer-brand-block">
+          <span class="footer-site-title">有限会社ロイヤルライフ</span>
+          <div class="footer-contact">
+            〒560-0085<br>
+            大阪府豊中市上新田3丁目6-17<br>
+            TEL: 06-6872-7040
+          </div>
+        </div>
+      </div>
+      <nav class="footer-menu">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-cookie">
+        <span>Cookieの取得と利用に同意をお願いします。</span>
+        <button id="cookie-accept">同意</button>
+        <button id="cookie-reject">拒否</button>
+        <span id="cookie-status"></span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-policy-link">
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="footer-copy">
+          Copyright &copy; 2025 有限会社ロイヤルライフ All rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ハンバーガーメニュー JS -->
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger-btn');
+      var menu = document.getElementById('nav-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        btn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      });
+    })();
+  </script>
+
+  <!-- Cookie 同意 JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var status = document.getElementById('cookie-status');
+      var acceptBtn = document.getElementById('cookie-accept');
+      var rejectBtn = document.getElementById('cookie-reject');
+      if (!status) return;
+      acceptBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'yes');
+        status.textContent = "（同意済み）";
+      };
+      rejectBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'no');
+        status.textContent = "（拒否されました）";
+      };
+      var saved = localStorage.getItem('cookie_agree');
+      if (saved === 'yes') status.textContent = "（同意済み）";
+      else if (saved === 'no') status.textContent = "（拒否されました）";
+    });
+  </script>
+
+</body>
+</html>

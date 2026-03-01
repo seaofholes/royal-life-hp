@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <title>物件情報 | 有限会社ロイヤルライフ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="有限会社ロイヤルライフの物件情報。不動産賃貸・管理の賃貸物件をご紹介します。"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2.0">
+  <style>
+    /* 物件ブロック */
+    .property-block {
+      margin-bottom: 36px;
+    }
+
+    .property-block:not(:last-of-type) {
+      padding-bottom: 32px;
+      border-bottom: 1px solid #e8e8e6;
+    }
+
+    .property-name {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      margin-top: 0;
+      letter-spacing: 0.06em;
+      border-left: 4px solid var(--gold);
+      padding-left: 10px;
+    }
+
+    .property-table {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .property-table .row {
+      display: flex;
+      border-bottom: 1px solid #eeeeec;
+      padding: 8px 0;
+    }
+
+    .property-table dt,
+    .property-table dd {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .property-table dt {
+      min-width: 90px;
+      font-weight: 600;
+      font-family: var(--font-serif);
+      color: var(--text-main);
+      flex-shrink: 0;
+    }
+
+    .property-table dd {
+      flex: 1;
+      color: var(--text-sub);
+      margin-left: 12px;
+      word-break: break-word;
+    }
+
+    .property-caption {
+      font-size: 1.1rem;
+      color: var(--text-sub);
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+
+    .property-caption a {
+      color: var(--text-main);
+      text-decoration: underline;
+    }
+
+    .property-caption a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 599px) {
+      .property-name {
+        font-size: 1.2rem;
+        padding-left: 8px;
+      }
+      .property-table dt,
+      .property-table dd {
+        font-size: 1.0rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <div class="logo-title">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="site-icon">
+        <span class="site-title">有限会社ロイヤルライフ</span>
+      </div>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">&#9776;</button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">トップページ</a>
+        <a href="company.html" class="nav-link">会社概要</a>
+        <a href="properties.html" class="nav-link active">物件情報</a>
+        <a href="news.html" class="nav-link">ニュース</a>
+        <a href="contact.html" class="nav-link">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 本文 -->
+  <main>
+    <section class="main-section">
+      <div class="main-box">
+        <h1 class="section-title">物件情報</h1>
+
+        <div class="property-list">
+          <div class="property-block">
+            <h2 class="property-name">ロイヤルグレイスヴィラ（ROYAL GRACE VILLA）</h2>
+            <dl class="property-table">
+              <div class="row"><dt>所在地</dt><dd>大阪府豊中市</dd></div>
+              <div class="row"><dt>間取り</dt><dd>3LDK / 50.0㎡</dd></div>
+              <div class="row"><dt>築年数</dt><dd>1989年築</dd></div>
+              <div class="row"><dt>特徴</dt><dd>駅近、駐車場有、貸しスタジオ有、ゲストルーム有</dd></div>
+            </dl>
+          </div>
+
+          <div class="property-block">
+            <h2 class="property-name">ザ・千里タワー（THE SENRI TOWER）</h2>
+            <dl class="property-table">
+              <div class="row"><dt>所在地</dt><dd>大阪府豊中市</dd></div>
+              <div class="row"><dt>間取り</dt><dd>3LDK / 92.0㎡</dd></div>
+              <div class="row"><dt>築年数</dt><dd>2009年築</dd></div>
+              <div class="row"><dt>特徴</dt><dd>24時間ゴミ出し可、セキュリティ完備、ペット飼育可</dd></div>
+            </dl>
+          </div>
+
+          <p class="property-caption">
+            その他の物件情報は、<a href="contact.html">お問い合わせ</a>よりご相談ください。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/royallifeicon.png" alt="ロイヤルライフ アイコン" class="footer-icon">
+        <div class="footer-brand-block">
+          <span class="footer-site-title">有限会社ロイヤルライフ</span>
+          <div class="footer-contact">
+            〒560-0085<br>
+            大阪府豊中市上新田3丁目6-17<br>
+            TEL: 06-6872-7040
+          </div>
+        </div>
+      </div>
+      <nav class="footer-menu">
+        <a href="index.html">トップページ</a>
+        <a href="company.html">会社概要</a>
+        <a href="properties.html">物件情報</a>
+        <a href="news.html">ニュース</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-cookie">
+        <span>Cookieの取得と利用に同意をお願いします。</span>
+        <button id="cookie-accept">同意</button>
+        <button id="cookie-reject">拒否</button>
+        <span id="cookie-status"></span>
+      </div>
+      <div class="footer-right">
+        <div class="footer-policy-link">
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="footer-copy">
+          Copyright &copy; 2025 有限会社ロイヤルライフ All rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ハンバーガーメニュー JS -->
+  <script>
+    (function() {
+      var btn = document.getElementById('hamburger-btn');
+      var menu = document.getElementById('nav-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        btn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      });
+    })();
+  </script>
+
+  <!-- Cookie 同意 JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var status = document.getElementById('cookie-status');
+      var acceptBtn = document.getElementById('cookie-accept');
+      var rejectBtn = document.getElementById('cookie-reject');
+      if (!status) return;
+      acceptBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'yes');
+        status.textContent = "（同意済み）";
+      };
+      rejectBtn.onclick = function() {
+        localStorage.setItem('cookie_agree', 'no');
+        status.textContent = "（拒否されました）";
+      };
+      var saved = localStorage.getItem('cookie_agree');
+      if (saved === 'yes') status.textContent = "（同意済み）";
+      else if (saved === 'no') status.textContent = "（拒否されました）";
+    });
+  </script>
+
+</body>
+</html>
